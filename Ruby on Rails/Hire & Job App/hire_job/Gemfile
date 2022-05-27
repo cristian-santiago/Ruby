@@ -1,0 +1,57 @@
+source "http://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby "3.0.0"
+gem "rails", "~> 7.0.3"
+gem "sprockets-rails"
+gem 'sprockets'
+gem 'bootstrap'
+gem 'jquery-rails'
+gem "pg", "~> 1.3.5"
+gem "puma", "~> 5.0"
+gem "importmap-rails"
+gem "turbo-rails"
+gem "stimulus-rails"
+gem "jbuilder"
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "bootsnap", require: false
+gem 'bcrypt-ruby', '3.1.5', require: 'bcrypt'
+gem 'cssbundling-rails'
+
+gem 'figaro' # Variáveis de ambiente
+gem 'simple_form' # Formulários simples e elgantes
+gem 'devise' # Autenticação
+gem 'haml' # html view
+gem 'haml-rails', '~> 2.0'
+
+#gem 'kaminari' # Paginação
+#gem 'kaminari-bootstrap' # CSS
+#gem 'ransack' # Pesquisas e buscas
+#gem 'select2-rails'# Select mais sofisticado
+
+group :development, :test do
+  
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'pry' # Fazer debugs
+  gem 'pry-rails' # Fazer debugs
+  gem 'awesome_print' # Entendendo o terminal
+  gem 'rspec-rails' # Colocando testes no app
+ 
+end
+
+group :development do
+  # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem "web-console"
+  gem 'listen', '~> 3.2'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~>2.0.0'
+  gem 'mailcatcher' #Tratamento de envio de emails
+
+end
+
+group :test do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "webdrivers"
+end
