@@ -5787,3 +5787,38 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 48ms (Views: 43.1ms | Allocations: 16360)
 
 
+Started GET "/" for 127.0.0.1 at 2022-05-27 02:42:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.haml
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (Duration: 202.0ms | Allocations: 43909)
+  Rendered shared/_topbar.html.haml (Duration: 33.8ms | Allocations: 6730)
+  Rendered layout layouts/application.html.haml (Duration: 3392.2ms | Allocations: 131413)
+Completed 200 OK in 3414ms (Views: 3397.5ms | ActiveRecord: 0.0ms | Allocations: 136621)
+
+
+Started GET "/docs/5.2/assets/brand/bootstrap-logo-white.svg" for 127.0.0.1 at 2022-05-27 02:42:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/docs/5.2/assets/brand/bootstrap-logo-white.svg"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-27 02:42:57 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.haml
+  Rendering devise/sessions/new.html.haml within layouts/devise
+  Rendered devise/shared/_links.html.haml (Duration: 3.1ms | Allocations: 3087)
+  Rendered devise/sessions/new.html.haml within layouts/devise (Duration: 180.6ms | Allocations: 28245)
+  Rendered layout layouts/devise.html.haml (Duration: 197.8ms | Allocations: 38430)
+Completed 200 OK in 219ms (Views: 199.4ms | ActiveRecord: 5.9ms | Allocations: 46337)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-27 02:43:56 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/devise.html.haml
+  Rendering devise/sessions/new.html.haml within layouts/devise
+  Rendered devise/shared/_links.html.haml (Duration: 7.6ms | Allocations: 2816)
+  Rendered devise/sessions/new.html.haml within layouts/devise (Duration: 33.4ms | Allocations: 15262)
+  Rendered layout layouts/devise.html.haml (Duration: 61.3ms | Allocations: 25353)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.0ms | Allocations: 26739)
+
+
