@@ -1,11 +1,11 @@
-%h2 Forgot your password?
+%h1.h3.mb-3.font-weight-normal.padding-top{:style => "text-align: center"} Forgot your password?
 = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
   = f.error_notification
   .form-inputs
-    = f.input :email,                       |
-      required: true,                       |
-      autofocus: true,                      |
-      input_html: { autocomplete: "email" } |
+    = f.input :email, required: true, label:false, autofocus: true, input_html: { autocomplete: "email" }, placeholder: 'Email'
   .form-actions
-    = f.button :submit, "Send me reset password instructions"
-= render "devise/shared/links"
+  .padding-top
+  .d-grid.gap-2
+    = f.button :submit, "Send me reset password instructions", class: 'btn btn-primary'
+  %hr
+  = render "devise/shared/links"

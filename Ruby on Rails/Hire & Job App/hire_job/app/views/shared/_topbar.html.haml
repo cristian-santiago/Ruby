@@ -1,11 +1,14 @@
-%nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark{"aria-label" => "Main navigation"}
+%nav.navbar.navbar-expand-md.fixed-top.navbar-dark.bg-dark
   .container-fluid
     %a.navbar-brand{:href => "#"} Hire & Jobs
-    %button#navbarSideCollapse.navbar-toggler.p-0.border-0{"aria-label" => "Toggle navigation", :type => "button"}
+    %button#navbarSideCollapse.navbar-toggler.p-0.border-0{"aria-label" => "offcanvas", :type => "button"}
       %span.navbar-toggler-icon
     #navbarsExampleDefault.navbar-collapse.offcanvas-collapse
       %ul.navbar-nav.me-auto.mb-2.mb-lg-0
         %li.nav-item
-          %a.nav-link.active{"aria-current" => "page", :href => "root_path"} Home
+          %a.nav-link.active{"aria-current" => "page", :href => "/"} Home
         %li.nav-item
-          %a.nav-link{:href => "#"} Login/Sign Up
+          %a.nav-link{:href => "/users/sign_in"} Login/Sign Up
+        %li.nav-item
+          %a.nav-link{:href => "/users/sign_in"} Log out
+             

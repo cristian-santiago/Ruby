@@ -23,6 +23,7 @@ gem 'simple_form' # Formulários simples e elgantes
 gem 'devise' # Autenticação
 gem 'haml' # html view
 gem 'haml-rails', '~> 2.0'
+#gem 'rails-i18n'
 
 #gem 'kaminari' # Paginação
 #gem 'kaminari-bootstrap' # CSS
