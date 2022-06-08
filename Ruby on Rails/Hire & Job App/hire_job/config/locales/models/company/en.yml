@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    models:
+      company: Company
+    attributes:
+      company:
+        name: Company name
+        url: Company site
+        
