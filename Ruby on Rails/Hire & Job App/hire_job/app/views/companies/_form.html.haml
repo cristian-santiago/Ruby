@@ -1,6 +1,12 @@
+%h1.h3.mb-3.font-weight-normal.padding-top{:style => "text-align: center"} Create a Company
 = simple_form_for @company do |f|
-  = f.input :name
-  = f.input :url 
-  = f.input :logo
-  .padding-top 
-    = f.button :submit, class: 'btn btn-primary'
+  .form-inputs
+    = f.input :name
+    = f.input :url
+    = image_tag(url_for(@company.logo), class: 'company-logo') unless @company.new_record? && !@company.logo.nil?
+    %p
+    %h7 Logo
+    %br/
+    = f.file_field :logo
+    %p
+    = f.button :submit, "Create Company", class: 'btn btn-primary'
