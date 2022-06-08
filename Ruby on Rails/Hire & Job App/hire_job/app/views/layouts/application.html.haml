@@ -11,8 +11,6 @@
     = javascript_importmap_tags 'application'
   %body
 
-  = render 'shared/topbar'
-  %main.container{:role => 'main'}
-
-
-    = yield
+    = render 'shared/topbar'
+    %main.container{:role => 'main'}
+      = yield

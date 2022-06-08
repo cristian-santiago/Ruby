@@ -95,3 +95,61 @@ Started GET "/home/index" for 127.0.0.1 at 2022-05-30 20:34:37 -0300
   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
 Started GET "/home/index" for 127.0.0.1 at 2022-05-30 22:29:23 -0300
   [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (3.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applicants/index" for 127.0.0.1 at 2022-06-07 03:33:31 -0300
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/applicants/new" for 127.0.0.1 at 2022-06-07 03:33:31 -0300
+Processing by ApplicantsController#new as HTML
+  Rendering layout layouts/application.html.haml
+  Rendering applicants/new.html.haml within layouts/application
+  Rendered applicants/new.html.haml within layouts/application (Duration: 3.7ms | Allocations: 3948)
+  Rendered shared/_topbar.html.haml (Duration: 9.5ms | Allocations: 7717)
+  Rendered layout layouts/application.html.haml (Duration: 17812.4ms | Allocations: 169858)
+Completed 200 OK in 17820ms (Views: 17815.1ms | ActiveRecord: 0.0ms | Allocations: 175071)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+Started GET "/companies/new" for 127.0.0.1 at 2022-06-07 03:33:49 -0300
+Processing by CompaniesController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 889)
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/companies/edit" for 127.0.0.1 at 2022-06-07 03:33:49 -0300
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/home/index" for 127.0.0.1 at 2022-06-07 03:33:49 -0300
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/positions/index" for 127.0.0.1 at 2022-06-07 03:33:49 -0300
+Processing by PositionsController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering layout layouts/application.html.haml
+  Rendering positions/show.html.haml within layouts/application
+  Rendered positions/show.html.haml within layouts/application (Duration: 1.6ms | Allocations: 1010)
+  Rendered shared/_topbar.html.haml (Duration: 0.5ms | Allocations: 238)
+  Rendered layout layouts/application.html.haml (Duration: 4.8ms | Allocations: 3686)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4533)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/positions/new" for 127.0.0.1 at 2022-06-07 03:33:49 -0300
+Processing by PositionsController#new as HTML
+  Rendering layout layouts/application.html.haml
+  Rendering positions/new.html.haml within layouts/application
+  Rendered positions/new.html.haml within layouts/application (Duration: 3.0ms | Allocations: 1006)
+  Rendered shared/_topbar.html.haml (Duration: 0.5ms | Allocations: 231)
+  Rendered layout layouts/application.html.haml (Duration: 6.0ms | Allocations: 3656)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3993)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/positions/show" for 127.0.0.1 at 2022-06-07 03:33:49 -0300
+Processing by PositionsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering layout layouts/application.html.haml
+  Rendering positions/show.html.haml within layouts/application
+  Rendered positions/show.html.haml within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered shared/_topbar.html.haml (Duration: 0.5ms | Allocations: 231)
+  Rendered layout layouts/application.html.haml (Duration: 3.5ms | Allocations: 2665)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2947)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m

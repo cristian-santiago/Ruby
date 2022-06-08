@@ -42,7 +42,7 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
 #Mailcatcher
-
+  config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { address: '127.0.0.1', port: 1025 }
   config.action_mailer.raise_delivery_errors = false
@@ -52,10 +52,10 @@ Rails.application.configure do
   config.active_support.deprecation = :log
 
   # Raise exceptions for disallowed deprecations.
-  config.active_support.disallowed_deprecation = :raise
+  #config.active_support.disallowed_deprecation = :raise
 
   # Tell Active Support which deprecation messages to disallow.
-  config.active_support.disallowed_deprecation_warnings = []
+  #config.active_support.disallowed_deprecation_warnings = []
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
