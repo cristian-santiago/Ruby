@@ -3,7 +3,6 @@
 
 def payment(price, opt)
     
-    #price = price.round(4)
     discount_5 = price - price*5/100 # discounting 5% from the product price
     discount_10 = price - price*10/100 # discounting 10% from the product price
     interest = price + price*20/100 # adding 20% interest on the final product price
@@ -23,9 +22,14 @@ def payment(price, opt)
         elsif inst_3x == 3
             print "The product will cost $#{price} in 3x on credit card, each installment will cost $#{price/3}"
         end
-
+    elsif opt == 4
+        print "Inform the amount of installments you wish (higher than 3x and up to 12x)"
+        inst_up3 = gets.to_i
+        print "The product cost $#{price}, and it'll be #{inst_up3}x of $#{interest/inst_up3}."
+        print "In total it'll cost $#{interest}"
     end
 end
+
 
 print "What's the product price? "
 price_prod = gets.to_f
@@ -41,5 +45,3 @@ option = gets.to_i
 
 
 payment(price_prod, option)
-
-#print price_prod
