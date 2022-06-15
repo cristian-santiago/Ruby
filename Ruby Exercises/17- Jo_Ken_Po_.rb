@@ -1,3 +1,11 @@
+def sleep_game
+    puts "JO"
+    sleep(1)
+    puts "KEN"
+    sleep(1)
+    puts "PO"
+    sleep(1)
+end
 score_p1 = 0
 score_cpu = 0
 while true
@@ -6,14 +14,15 @@ while true
     puts "-="*30
     puts "Choose an option below:"
     puts"
-            - STONE
-            - PAPER
-            - SCISSORS
-            - END GAME
+            1- STONE
+            2- PAPER
+            3- SCISSORS
+            4- END GAME
         "
     puts "-="*30
     player = gets.to_i
-    #jo_ken_po(p1)
+
+    
 
         
     game = ['STONE', 'PAPER', 'SCISSORS']
@@ -21,17 +30,21 @@ while true
     cpu = game.sample
 
     # Player Game confirmation
-    if player == 1 
+    if player == 1
+        puts sleep_game
         puts "You played: >>  STONE  <<"
     elsif player == 2
+        puts sleep_game
         puts "You played: >>  PAPER  <<"
-    elsif player == 3 
+    elsif player == 3
+        puts sleep_game
         puts "You played: >>  SCISSORS  <<"
-    elsif player == 4        
-        puts "Thanks for playing. your score is :#{score_p1} pontos. CPU is: #{score_cpu}"
-break
-    end
+    elsif player == 4
         
+        puts "Thanks for playing. your score is :#{score_p1} pontos. CPU is: #{score_cpu}"
+        break
+    end
+   
     # Game condition
 
     if cpu == 'STONE' && player == 3
