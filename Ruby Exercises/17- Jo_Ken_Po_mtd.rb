@@ -55,10 +55,10 @@ while true
     puts "-="*30
     puts "Choose an option below:"
     puts"
-            - STONE
-            - PAPER
-            - SCISSORS
-            - END GAME
+            1- STONE
+            2- PAPER
+            3- SCISSORS
+            4- END GAME
         "
     puts "-="*30
     p1 = gets.to_i
