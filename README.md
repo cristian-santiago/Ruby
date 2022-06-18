@@ -27,19 +27,18 @@
   <a name="contents">Contents </a> 
 </h2>
 
-Directory | Description
-----------|-------------------------------------------
-[**Ruby Exercises**](https://github.com/cristian-santiago/Ruby/tree/main/RubyExercises)    | Collection of exercises in Ruby 
+  Directory | Description
+  ----------|-------------------------------------------
+  [**Ruby Exercises**](https://github.com/cristian-santiago/Ruby/tree/main/Ruby%20Exercises)  |Collection of exercises in Ruby.
+  [**Ruby on Rails**](https://github.com/cristian-santiago/Ruby/tree/main/Ruby%20on%20Rails)  |Powerfull and fast framework for web development.
+  
 
-[**Ruby on Rails**](https://github.com/cristian-santiago/Ruby/tree/main/RubyonRails)     | Dante is a chatbot created to have 
 
 
 <h2>
   <a name="project">Projects </a> 
 </h2>
-
-    Under construction...
-
+  Under construction...
 <h2>
   <a name="contribute">Contributing </a> 
 </h2>
