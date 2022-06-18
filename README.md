@@ -1,5 +1,5 @@
 <div align = 'center'>
-<img  src='![ruby_logo](https://user-images.githubusercontent.com/103728899/174420394-431f6b03-26e6-4db4-87ed-7d0e60641092.png)' width= 300>
+<img  src="https://user-images.githubusercontent.com/103728899/174420697-d35a8613-32d5-40a3-bb30-e74416ca31a0.png" width= 300>
 </div>
 <h1 align='center'> Ruby</h1>
 
@@ -56,5 +56,3 @@ Directory | Description
 </h2>
 
 Copyright (C) 2020-2022 by **Cristian Santiago** 
-___
-![Visits Badge](https://badges.pufler.dev/visits/cristian-santiago/Ruby)
