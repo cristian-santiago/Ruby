@@ -11,35 +11,37 @@ while true
     value = gets.to_i
     add = cpu + value
     if game == "o"
-        puts "You choose ODD!"
-        sleep(1.5)
-        puts "So I get EVEN!"
-        sleep(1.5)
-        puts "Ready...GO!!"
-        sleep(2)
-        if add % 2 == 0
-            puts "You LOSE!! You choose #{value}, and I choose #{cpu}, so #{add} is EVEN"
-            break
-        elsif
+        #puts "You choose ODD!"
+        #sleep(1.5)
+        #puts "So I get EVEN!"
+        #sleep(1.5)
+        #puts "Ready...GO!!"
+        #sleep(2)
+        if add % 2 != 0
             puts "You WIN!! You choose #{value}, and I choose #{cpu}, so #{add} is ODD"
             count += 1
+        elsif add % 2 == 0       
+            puts "You LOSE!! You choose #{value}, and I choose #{cpu}, so #{add} is EVEN"
+            break  
         end
         
+        
     elsif game == "e"
-        puts "You choose EVEN!"
-        sleep(1.5)
-        puts "So I get ODD!"
-        sleep(1.5)
-        puts "Ready...GO!!"
-        sleep(2)
+        #puts "You choose EVEN!"
+        #sleep(1.5)
+        #puts "So I get ODD!"
+        #sleep(1.5)
+        #puts "Ready...GO!!"
+        #sleep(2)
         if add % 2 == 0
             puts "You WIN!! You choose #{value}, and I choose #{cpu}, so #{add} is EVEN"
             count += 1
 
-        elsif
+        elsif add % 2 != 0        
             puts "You LOSE!! You choose #{value}, and I choose #{cpu}, so #{add} is ODD"
-            break
+            break   
         end
+        
 
         
     end
