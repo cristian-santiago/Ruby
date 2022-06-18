@@ -1,5 +1,5 @@
 <div align = 'center'>
-<img  src='#' width= 300>
+<img  src='![ruby_logo](https://user-images.githubusercontent.com/103728899/174420394-431f6b03-26e6-4db4-87ed-7d0e60641092.png)' width= 300>
 </div>
 <h1 align='center'> Ruby</h1>
 
