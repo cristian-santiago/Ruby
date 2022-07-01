@@ -11,7 +11,8 @@
     </strike>
       <%= form_for task do |f| %>
         <%= f.check_box :done, :value => task.done %>
-        <%= f.submit "Undone" %>
+        <%= f.submit "Undone", class: "btn btn-warning" %>
+        
     <% end %>
   <%else task.done == false %>     
     
@@ -19,7 +20,7 @@
     
       <%= form_for task do |f| %>
         <%= f.check_box :done, :value => task.done %>        
-        <%= f.submit "Done" %>
+        <%= f.submit "Done", class: "btn btn-success" %>
     <% end %>
   <%end%>
 <% end %>
