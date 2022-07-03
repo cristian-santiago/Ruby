@@ -1,22 +1,22 @@
 <%= form_with(model: todo) do |form| %>
-  <% if todo.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
-
-      <ul>
-        <% todo.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+      <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+        <div class="col-12">
+          <div class="form-outline">
+            <%= form.text_field :name, class: "form-control"%>
+            
+            <label class="form-label" for="form1">Enter a task here</label>
+          </div>
+        </div>
+        <div class="col-12" >          
+          <%= button_to "Create3", new_todo_path, method: :get, class: "btn-primary" %>               
+        </div>
+        <div class="col-12 button">
+          <%= form.submit "Search", method: :new, class: "btn btn-primary" %>          
+        </div>
+
+
+      </form>  
   </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

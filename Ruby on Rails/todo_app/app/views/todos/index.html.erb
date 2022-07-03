@@ -1,14 +1,49 @@
-<p style="color: green"><%= notice %></p>
-
 <body >
-  <div>
-    <h1>Todos</h1>
-  </div>
-  <div>
-    <% @todos.each do |todo| %>
-      <%= render todo %>
-    <% end %>
-  </div>
+  
+    <p style="color: green"><%= notice %></p>
 
-  <%= link_to "New todo", new_todo_path %>
-</body>
+
+    <section class="vh-100" style="background-color: #eee;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-lg-9 col-xl-7">
+            <div class="card rounded-3">
+              <div class="card-body p-4">
+  
+                <h4 class="text-center my-3 pb-3">To Do App</h4>
+                <%= render "form", todo: @todo %>
+                                   
+                <table class="table mb-4">
+                  <thead>
+                    <tr>
+                      <th scope="col">No.</th>
+                      <th scope="col">Todo item</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <div>
+                        <% @todos.each do |todo| %>
+                          
+                            <th scope="row"></th>
+                            <td><%= link_to todo.name, todo %></td>
+                            <td>In progress</td>
+                            <td >
+                              <%= button_to "Delete", todo, method: :delete, class: "btn btn-danger " %> 
+                            </td>
+                          </tr>
+                        <%end%>
+                    </tr>
+                  </tbody>
+                </table>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%= link_to "New todo", new_todo_path %>
+  </body>
