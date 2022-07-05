@@ -1,6 +1,15 @@
 <h1>Editing todo</h1>
 
-<%= render "form", todo: @todo %>
+<%= form_with(model: @todo) do |form| %>
+  <div class="form-outline">
+    <%= form.text_field :name, maxlength: 50, class: "form-control text-area"%>
+    
+    <label class="form-label" for="form1">Edit Todo</label>
+  </div>
+  <div class="col-12 ">
+    <%= form.submit "Edit", method: :edit, class: "btn btn-primary" %>          
+  </div>
+<%end%>
 
 <br>
 

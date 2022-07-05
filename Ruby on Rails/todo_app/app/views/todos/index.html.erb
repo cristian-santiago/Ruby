@@ -1,49 +1,65 @@
-<body >
-  
-    <p style="color: green"><%= notice %></p>
+<body style="background-color: #eee;"> 
+  <section class="vh-150" ">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-lg-9 col-xl-7">
+          <div class="card rounded-3">
+            <div class="card-body p-4">
 
-
-    <section class="vh-100" style="background-color: #eee;">
-      <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col col-lg-9 col-xl-7">
-            <div class="card rounded-3">
-              <div class="card-body p-4">
-  
-                <h4 class="text-center my-3 pb-3">To Do App</h4>
-                <%= render "form", todo: @todo %>
-                                   
-                <table class="table mb-4">
-                  <thead>
-                    <tr>
-                      <th scope="col">No.</th>
-                      <th scope="col">Todo item</th>
-                      <th scope="col">Status</th>
-                      <th scope="col">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <div>
-                        <% @todos.each do |todo| %>
+              <h4 class="text-center my-3 pb-3">To Do App</h4>
+              <%= form_with(model: @todo) do |form| %>
+                <div>
+                    <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+                      <div class="col-12">
+                        <div class="form-outline">
+                          <%= form.text_field :name, maxlength: 40, required: true, class: "form-control text-area"%>
                           
-                            <th scope="row"></th>
-                            <td><%= link_to todo.name, todo %></td>
-                            <td>In progress</td>
-                            <td >
-                              <%= button_to "Delete", todo, method: :delete, class: "btn btn-danger " %> 
-                            </td>
-                          </tr>
-                        <%end%>
-                    </tr>
-                  </tbody>
-                </table>
-  
-              </div>
+                          <label class="form-label" for="form1">Create a main task here</label>
+                          
+                        </div>
+                      </div>
+
+                      <div class="col-8 ">
+                        <%= button_to "Create", @todo, method: :new, class: "btn btn-primary " %> 
+                        <p style="color: green"><%= notice %></p>         
+                      </div>
+                    </form>  
+                </div>
+
+              <% end %>
+                                  
+              <table class="table mb-4">
+                <thead>
+                  <tr>
+                    
+                    <th scope="col">Todo item</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    <% @todos.each do |todo| %>
+
+
+                      <tr>                        
+                        <th scope="row"><%= link_to todo.name, todo %></th>
+                          <td>In Progress </td>
+                        <td>
+                          <%= button_to "Delete", todo, method: :delete, class: "btn btn-danger " %>
+                        </td>                       
+                      </tr>
+                    <%end%>
+                  
+                </tbody>
+              </table>
+
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <%= link_to "New todo", new_todo_path %>
-  </body>
+    </div>
+  </section>
+
+
+</body>

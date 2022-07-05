@@ -16,7 +16,16 @@ class TasksController < ApplicationController
             redirect_to root_path
         end
     end
+    def destroy
+        @task = Task.find(params[:id])
+        @task.destroy         
+        respond_to do |format|
+            format.html { redirect_to todo_path, notice: "Task was successfully destroyed." }
+            format.json { head :no_content }
+        end
+        
 
+    end
     
     private
     def task_params

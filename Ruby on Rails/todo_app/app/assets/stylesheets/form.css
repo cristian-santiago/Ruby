@@ -1,12 +1,32 @@
 .button{
-    background: solid;
-    color: #444;
+
     display: block;
     float: left;
-    font: normal 12px arial, sans-serif;
-    height: 24px;
     margin-right: 6px;
-    padding-right: 18px;
+    margin: 0 auto;
+    
+}
+.create {
+    display: block;    
+    margin-left: 25%;
+    
+}
+
+.link:active{
+    color: white;
+}
+.link:hover{
+    color: white;
+}
+.link:visited{
+    color: white;
+   
+
+}
+.link{
     text-decoration: none;
+}
+
+.text-area{
     
 }

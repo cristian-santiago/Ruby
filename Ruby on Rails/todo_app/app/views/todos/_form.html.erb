@@ -1,21 +1,17 @@
-<%= form_with(model: todo) do |form| %>
+<%= form_with(model: @todo) do |form| %>
   <div>
       <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
         <div class="col-12">
           <div class="form-outline">
-            <%= form.text_field :name, class: "form-control"%>
+            <%= form.text_field :name, maxlength: 50, class: "form-control text-area"%>
             
             <label class="form-label" for="form1">Enter a task here</label>
           </div>
         </div>
-        <div class="col-12" >          
-          <%= button_to "Create3", new_todo_path, method: :get, class: "btn-primary" %>               
-        </div>
-        <div class="col-12 button">
-          <%= form.submit "Search", method: :new, class: "btn btn-primary" %>          
-        </div>
 
-
+        <div class="col-8">        
+          <button class="btn btn-primary button"><%= link_to "New todo", new_todo_path, class: "link" %></button>
+        </div>
       </form>  
   </div>
 

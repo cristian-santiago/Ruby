@@ -4,6 +4,7 @@ class TodosController < ApplicationController
   # GET /todos or /todos.json
   def index
     @todos = Todo.all
+    @todo = Todo.new
   end
 
   # GET /todos/1 or /todos/1.json
@@ -21,13 +22,15 @@ class TodosController < ApplicationController
   def edit
   end
 
+  
+
   # POST /todos or /todos.json
   def create
     @todo = Todo.new(todo_params)
 
     respond_to do |format|
       if @todo.save
-        format.html { redirect_to todo_url(@todo), notice: "Todo was successfully created." }
+        format.html { redirect_to root_path, notice: "Todo was successfully created." }
         format.json { render :show, status: :created, location: @todo }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -66,6 +69,6 @@ class TodosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def todo_params
-      params.require(:todo).permit(:name)
+      params.require(:todo).permit(:name, :progress)
     end
 end
