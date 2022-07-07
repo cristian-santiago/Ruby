@@ -3,6 +3,9 @@ class TodosController < ApplicationController
 
   # GET /todos or /todos.json
   def index
+    if params[:search]
+      search_todo
+    end
     @todos = Todo.all
     @todo = Todo.new
   end
@@ -11,7 +14,16 @@ class TodosController < ApplicationController
   def show
     @task = Task.new
     @tasks = @todo.tasks
+    @todo = Todo.find(params[:id])
   end
+
+  def search_todo
+
+    if @todo = Todo.all.find{|todo| todo.name.include?(params[:search])}
+      redirect_to todo_path(@todo)
+    end
+  end
+
 
   # GET /todos/new
   def new

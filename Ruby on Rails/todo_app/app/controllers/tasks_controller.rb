@@ -2,7 +2,8 @@ class TasksController < ApplicationController
     def create
         @task = Task.create(task_params)
         if @task.save
-            redirect_to todo_path(@task.todo_id)
+            redirect_to todo_path(@task.todo_id), notice: "Task was successfully created." 
+
         else
             redirect_to root_path
         end
