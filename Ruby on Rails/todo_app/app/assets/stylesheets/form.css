@@ -1,24 +1,63 @@
-.td-button{
-    
-text-align: center;
-vertical-align: middle;
-    
+html{
+    overflow-y: scroll;
 }
-.td-status{
 
+.actions{
+   text-align: right;
+   
+}
+.button-inline-delete{
+    float: right;    
+    margin-top: 14px;
+    text-align: center;
+           
+}
+
+.button-inline-edit{
+
+    float: right;
+    margin-top: 14px;
+    display: block;
+    text-align: right;
+    margin-right: 5px;
+     
+}
+
+.vertical-middle-btn-todo{
+    
+    
+    vertical-align: middle;
+    
+        
+    }
+.vertical-middle-btn{
+
+    text-align: center;
+    vertical-align: middle;
+        
+    }
+.vertical-middle-txt{
+
+    text-decoration: none;
+    vertical-align: middle;
+        
+    }
+
+.separator{
+    width:30%;
 }
 .create {
     display: block;    
     margin-left: 25%;
     
 }
-
 .link:active{
     color: white;
 }
 .link:hover{
     color: white;
 }
+
 .link:visited{
     color: white;
    
@@ -26,7 +65,17 @@ vertical-align: middle;
 }
 .link{
     text-decoration: none;
+    color: white;
 }
+.todo-link{
+    text-decoration: none;
+    color: rgba(35, 33, 33, 0.674);
+}
+.todo-link:hover{
+    
+    color: black;
+}
+
 
 .break-line{
     word-wrap: break-word;
