@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>TodoApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv= "X-UA-Compatible" content="ie=edge">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +11,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body style="background-color: #eee;"> 
+  <body>
+    
+   
     <%= yield %>
   </body>
 </html>

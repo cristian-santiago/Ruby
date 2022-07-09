@@ -15,6 +15,7 @@ class TodosController < ApplicationController
     @task = Task.new
     @tasks = @todo.tasks
     @todo = Todo.find(params[:id])
+    
   end
 
   def search_todo

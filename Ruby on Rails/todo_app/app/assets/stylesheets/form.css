@@ -2,40 +2,32 @@ html{
     overflow-y: scroll;
 }
 
-.actions{
-   text-align: right;
-   
-}
-.button-inline-delete{
-    float: right;    
-    margin-top: 14px;
-    text-align: center;
-           
-}
-
-.button-inline-edit{
-
-    float: right;
-    margin-top: 14px;
-    display: block;
-    text-align: right;
-    margin-right: 5px;
-     
-}
-
-.vertical-middle-btn-todo{
-    
-    
+th, td{
     vertical-align: middle;
-    
-        
-    }
-.vertical-middle-btn{
+         
+}
 
-    text-align: center;
-    vertical-align: middle;
-        
-    }
+.transparent{
+    background-color:rgba(238, 238, 238, 0.314)
+    
+}
+body::before{
+    content: '';
+    
+    background-image: linear-gradient(rgba(238, 238, 238, 0.6),rgba(218, 218, 218, 0.5)), image-url('todo_img1.jpg');
+    position: fixed;
+    background-size: cover;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    
+}
+
 .vertical-middle-txt{
 
     text-decoration: none;
@@ -46,11 +38,7 @@ html{
 .separator{
     width:30%;
 }
-.create {
-    display: block;    
-    margin-left: 25%;
-    
-}
+
 .link:active{
     color: white;
 }
