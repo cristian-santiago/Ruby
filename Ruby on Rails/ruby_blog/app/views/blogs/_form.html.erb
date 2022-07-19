@@ -3,6 +3,6 @@
     <%= f.text_field :title %>
     <%= f.label :content %>
     <%= f.text_field :content %>
-
-    <%= f.submit "Create a Blog Post" %>
+    <%= f.text_field :category_id, :value => Category.first.id %>
+    <%= f.submit  %>
 <%end%>

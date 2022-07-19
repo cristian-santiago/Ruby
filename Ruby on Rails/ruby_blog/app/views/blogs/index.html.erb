@@ -1,11 +1,24 @@
-<h1>Blogs#index</h1>
-<p>Find me in app/views/blogs/index.html.erb</p>
+<section class="vh-150  py-5 " >
+  <div class="container py-5 h-100 " >
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-9">
+        <div class="card rounded-3 transparent">
+          <div class="card-body p-4 ">
+            <h1 class="text-center my-3 pb-3">Ruby GO</h1>
 
 
-
-<% @blogs.each do |blog|%>
-    <article class= "blog-card">
-    <h3><%= link_to blog.title, blog_path(blog.id)%></h3>
-    </article>
-<%end%>
-<%= link_to "Create Blog", new_blog_path %>
+                <% @blogs.each do |blog|%>
+                    <article class= "blog-card">
+                        <h3><%= link_to blog.title, blog_path(blog.id)%></h3>
+                        <p><%= blog.category.category %></p>
+                        <h5> <%= blog.content %></h5>
+                    </article>
+                <%end%>
+                <%= link_to "Create Blog", new_blog_path %>
+        
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</section>       
