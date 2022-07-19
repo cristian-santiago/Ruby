@@ -1,9 +1,10 @@
 <h1>Blogs#show</h1>
 <p>Find me in app/views/blogs/show.html.erb</p>
 
-
-<h3><%= @blog.title%></h3>
-<p> <%= @blog.content %></p>
+<article class="blog-card">
+    <h3><%= @blog.title%></h3>
+    <p> <%= @blog.content %></p>
+</article>
 
 <%= link_to "Edit", edit_blog_path(@blog.id) %>
 <%= button_to "Delete", @blogs, method: :delete %>

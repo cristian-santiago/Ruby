@@ -1,0 +1,18 @@
+.blog-card {
+    margin-top: 20px;
+    background-color: #ebebeb;
+    padding: 12px 34px;
+    padding-top: 12px;
+    padding-right: 34px;
+    padding-bottom: 12px;
+    padding-left: 34px;
+    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
