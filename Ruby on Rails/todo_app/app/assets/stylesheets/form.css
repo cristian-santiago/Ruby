@@ -7,14 +7,11 @@ th, td{
          
 }
 
-.transparent{
-    background-color:rgba(238, 238, 238, 0.314)
-    
-}
+
 body::before{
     content: '';
     
-    background-image: linear-gradient(rgba(238, 238, 238, 0.6),rgba(218, 218, 218, 0.5)), image-url('todo_img1.jpg');
+    background-image: linear-gradient(rgba(238, 238, 238, 0.3),rgba(218, 218, 218, 0.4)), image-url('todo_img1.jpg');
     position: fixed;
     background-size: cover;
     object-fit: cover;
@@ -57,7 +54,7 @@ body::before{
 }
 .todo-link{
     text-decoration: none;
-    color: rgba(35, 33, 33, 0.674);
+    color: rgba(20, 19, 19, 0.767);
 }
 .todo-link:hover{
     
@@ -78,4 +75,26 @@ body::before{
 
 .button-back{
     margin-left: 1em;
+}
+
+.form-decoration{
+    
+    background-color: white !important;
+    
+    
+    
+}
+
+.transparent{
+    
+    background-color: rgba(238, 238, 238, 0.8);
+    
+}
+
+header{
+    
+    text-align: center;
+    position: relative;
+    
+
 }
