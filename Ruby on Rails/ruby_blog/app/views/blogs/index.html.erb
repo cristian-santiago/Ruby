@@ -5,17 +5,19 @@
         <div class="card rounded-3 transparent">
           <div class="card-body p-4 ">
             <h1 class="text-center my-3 pb-3">Ruby GO</h1>
+                <% @categories.each do |category| %>
+                    <%= link_to category.category, blogs_path(:cate => category.id)%>
 
-
-                <% @blogs.each do |blog|%>
+                <%end%>
+                <% @blogs.map do |blog|%>
                     <article class= "blog-card">
                         <h3><%= link_to blog.title, blog_path(blog.id)%></h3>
-                        <p><%= blog.category.category %></p>
+                        
+                        <p> <%= blog.category.category %></p>
+                        
                         <h5> <%= blog.content %></h5>
                     </article>
-                <%end%>
-                <%= link_to "Create Blog", new_blog_path %>
-        
+                <%end%>                       
           </div>  
         </div>
       </div>
