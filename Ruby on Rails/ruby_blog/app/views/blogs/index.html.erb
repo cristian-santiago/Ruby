@@ -5,16 +5,12 @@
         <div class="card rounded-3 ">
           <div class="card-body p-4 ">
             <h1 class="text-center my-3 pb-3">Ruby GO</h1>
-                <% @categories.each do |category| %>
-                    <%= link_to category.category, blogs_path(:cate => category.id)%>
-
-                <%end%>
                 <% @blogs.map do |blog|%>
                     <article class= "blog-card">
-                        <h3><%= link_to blog.title, blog_path(blog.id)%></h3>
-                        
-                        <p> <%= blog.category.category %></p>
-                        
+                        <h3><%= link_to blog.title, blog_path(blog.id), class: "link" %> </h3>                       
+
+
+                        <p> <%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %></p>
                         <h5> <%= blog.content %></h5>
                     </article>
                 <%end%>                       
