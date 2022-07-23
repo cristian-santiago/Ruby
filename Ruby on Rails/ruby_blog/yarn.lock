@@ -22,6 +22,20 @@
   dependencies:
     utilise "^2.3.5"
 
+"@rails/actiontext@^7.0.3-1":
+  version "7.0.3-1"
+  resolved "https://registry.yarnpkg.com/@rails/actiontext/-/actiontext-7.0.3-1.tgz#cd6ada90068376e3e9081067a12b4dfe8e72d433"
+  integrity sha512-4gyYWbc6gdRlTITOU1cy83d9dq5J9IPm+p2418Iy6ekG1XoZwW2zsuSJisKCc6AF8tGrYM4LtLtXif04zz8bXg==
+  dependencies:
+    "@rails/activestorage" ">= 7.0.0-alpha1"
+
+"@rails/activestorage@>= 7.0.0-alpha1":
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-7.0.3.tgz#516770d49f702bb2b746a826779465a513804003"
+  integrity sha512-pdIoQUNcimjbSlhUgnRyFimVvsp/J9C1yTxV3P40oQrRU81f3uM9tT4IY/wMfe691Zj7tJBiqsbThUoPT88TAA==
+  dependencies:
+    spark-md5 "^3.0.1"
+
 "@sindresorhus/is@^4.0.0":
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
@@ -3706,6 +3720,11 @@ source-map@^0.5.6, source-map@~0.5.3:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==
 
+spark-md5@^3.0.1:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/spark-md5/-/spark-md5-3.0.2.tgz#7952c4a30784347abcee73268e473b9c0167e3fc"
+  integrity sha512-wcFzz9cDfbuqe0FZzfi2or1sgyIrsDwmPwfZC4hiNidPdPINjeUwNfv5kldczoEAcjl9Y1L3SM7Uz2PUEQzxQw==
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
@@ -3955,6 +3974,11 @@ tough-cookie@~2.4.3:
   dependencies:
     psl "^1.1.24"
     punycode "^1.4.1"
+
+trix@^2.0.0-beta.0:
+  version "2.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/trix/-/trix-2.0.0-beta.0.tgz#e7034867182356c023abdef90c7bdc341bb3e105"
+  integrity sha512-D1c7FxP1hGXM/MnTd/+fGUbSDLkfxsqjA0NxOTzByQywVJVNHDOkn8xAScCKVOiAN6hXlqUR2qX4CPJHTGj+cQ==
 
 tty-browserify@~0.0.0:
   version "0.0.1"

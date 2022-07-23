@@ -1,4 +1,7 @@
 class BlogsController < ApplicationController
+
+  
+
   def index
     @categories = Category.all
     cate = params[:cate]
@@ -6,14 +9,13 @@ class BlogsController < ApplicationController
     if !cate.nil?
       @blogs = Blog.where(:category_id => cate)
     else
-      @blogs = Blog.all
+      @blogs = Blog.all.with_rich_text_content
     end
     
   end
 
-  def show
+  def show    
     @blog = Blog.find(params[:id])
-    
   end
 
   def new
@@ -49,6 +51,7 @@ class BlogsController < ApplicationController
   end
 
   private
+
 
   def blog_params
     params.require(:blog).permit(:title, :content, :category_id)

@@ -6,3 +6,5 @@ import "controllers"
 //= require turbolinks
 //= import bootstrap
 //= require_tree .
+import "trix"
+import "@rails/actiontext"
