@@ -18,7 +18,18 @@
 }
 
 
-.link {
+.link_title {
     text-decoration: none;
 }
 
+.link_content{
+    
+        text-decoration: none;
+        color: rgba(20, 19, 19, 0.767);
+}
+ .link_content:hover{
+        
+        color: black;
+    }
+    
+    
