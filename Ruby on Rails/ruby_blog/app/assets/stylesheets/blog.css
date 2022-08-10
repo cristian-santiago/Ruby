@@ -20,8 +20,11 @@
 
 .link_title {
     text-decoration: none;
-}
 
+}
+.link_title:hover{
+    text-decoration: none;
+}
 .link_content{
     
         text-decoration: none;
@@ -30,6 +33,7 @@
  .link_content:hover{
         
         color: black;
+        text-decoration: none;
     }
     
     

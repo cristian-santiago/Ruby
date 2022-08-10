@@ -5,7 +5,7 @@ class BlogsController < ApplicationController
   def index
     @categories = Category.all
     cate = params[:cate]
-
+    
     if !cate.nil?
       @blogs = Blog.where(:category_id => cate)
     else
@@ -15,7 +15,7 @@ class BlogsController < ApplicationController
   end
 
   def show    
-    @blog = Blog.find(params[:id])
+    @blog = Blog.find(params[:id])    
   end
 
   def new
