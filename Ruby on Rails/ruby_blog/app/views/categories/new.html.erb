@@ -1,9 +1,17 @@
-<h1>New category</h1>
-
-<%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Back to categories", categories_path %>
-</div>
+<p style="color: green"><%= notice %></p>
+<section class="vh-150  py-5 " >
+  <div class="container py-5 h-100 " >
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-6">
+        <div class="card rounded-3 transparent">
+          <div class="card-body p-4 ">
+            <h1 class="text-center my-3 pb-3"> Create a new Category </h1>
+                                   
+                <%= render "form", category: @category %>          
+                       
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

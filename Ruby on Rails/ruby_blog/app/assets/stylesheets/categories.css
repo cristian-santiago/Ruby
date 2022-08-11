@@ -1,0 +1,21 @@
+.link{
+    text-decoration: none;
+        color: rgba(20, 19, 19, 0.767);
+}
+
+.link:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.btn-align{
+    display: inline-flex;
+    padding-top: 1rem;
+    padding-left:  5px;
+}
+
+.btn-align-2{
+    display: inline-flex;
+    padding-top: 1rem;
+    padding-left:  5px;
+}

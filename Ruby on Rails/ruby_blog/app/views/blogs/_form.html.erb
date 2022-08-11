@@ -11,16 +11,16 @@
                                     <label for="title" class="form-label">Blog Title</label>
                                     <%= f.text_field :title, class: "form-control" %>                                                   
                                 </div>
-                                <div class="mb-3 field">
+                                <div class="mb-3">
                                     <label for="content" class="form-label">Blog Content</label>
                                     <%= f.rich_text_area :content, class: "form-control", rows: "60" %>
                                 </div>
-                                <div class="form-group"> 
-                                    <label for="categories" class="form-label">Categories</label>                                        
-                                    <%= f.select :category_id,  Category.all.map { |c| [c.category, c.id]}, include_blank: true %>                                                                                                                     
+                                <div class="mb-3 size"> 
+                                    <label for="categories" class="form-label">Select Categories</label>                                        
+                                    <%= f.select :category_id,  Category.all.map { |c| [c.category, c.id]}, {include_blank: true}, {class: "form-control"} %>                                                                                                                     
                                 </div>
-                                <div>
-                                    <%= f.submit  %>
+                                <div >                                    
+                                    <%= f.submit class:"btn btn-secondary" %>
                                 </div>                                
                             <%end%>
                     </div>

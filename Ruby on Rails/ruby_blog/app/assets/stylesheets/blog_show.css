@@ -1,0 +1,13 @@
+.test{
+    text-decoration: none;
+}
+
+.btn-align{
+    display: inline-flex;
+    padding-top: 1rem;
+    padding-left:  5px;
+}
+
+.size{
+    width: 20%;
+}
