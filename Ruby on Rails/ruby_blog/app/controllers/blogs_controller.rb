@@ -1,21 +1,25 @@
 class BlogsController < ApplicationController
 
-  
-
   def index
+    
     @categories = Category.all
     cate = params[:cate]
     
     if !cate.nil?
       @blogs = Blog.where(:category_id => cate)
+      
     else
       @blogs = Blog.all.with_rich_text_content
     end
-    
+      
   end
 
   def show    
-    @blog = Blog.find(params[:id])    
+    @blog = Blog.find(params[:id])
+    if @blog.nil?
+      redirect_to :action => :index
+    end
+    
   end
 
   def new
@@ -47,9 +51,12 @@ class BlogsController < ApplicationController
   def destroy 
     @blog = Blog.find(params[:id])
     @blog.destroy
-    redirect_to :action => :index
-  end
 
+    redirect_to :action => :index, status: 303
+  
+    
+
+  end
   private
 
 
