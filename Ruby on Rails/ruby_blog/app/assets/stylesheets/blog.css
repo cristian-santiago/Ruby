@@ -25,12 +25,12 @@
 .link-title:hover{
     text-decoration: none;
 }
-.link-content{
+.link-description{
     
     text-decoration: none;
     color: rgba(20, 19, 19, 0.767);
 }
- .link-content:hover{
+ .link-description:hover{
         
     color: black;
     text-decoration: none;
@@ -71,4 +71,11 @@
    
     margin-left: 1rem;
     
+}
+
+.italic-text-tags{
+    font-style: italic;
+    text-decoration: none;
+    color: rgba(20, 19, 19, 0.767);
+
 }

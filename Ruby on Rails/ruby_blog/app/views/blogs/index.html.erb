@@ -21,8 +21,11 @@
                               <h4 class="name">Cristian Santiago</h4>
                             </div> 
                               <p><%= blog.created_at.strftime("%d %b, %Y")%></p>
-                                                                    
-                          <h5 > <%= link_to truncate(sanitize(blog.content.to_s, tags: []), length: 200) , blog_path(blog.id), class: "link-content"%></h5> 
+                            
+                            <p> <%= link_to blog.description.to_s, blog_path(blog.id), class: "link-description"%> </p>                              
+                          
+                          <!-- Removed this feature, add description on blog
+                          <h5 > <%= link_to truncate(sanitize(blog.content.to_s, tags: []), length: 200) , blog_path(blog.id), class: "link-content"%></h5> -->
                     </article>           
 
                 <%end%> 

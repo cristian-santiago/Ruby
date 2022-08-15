@@ -8,8 +8,9 @@
             
               <article class="blog-card">
                   <h3><%= @blog.title %></h3>
-                  <p><%= @blog.category.category %></p>
-                  <h5> <%= @blog.content %></h5>
+                  
+                    <p>Tags: <%= link_to @blog.category.category, blogs_path(:cate => @blog.category.id), class: "italic-text-tags" %></p>
+                  <%= @blog.content %>
               </article>
             
 

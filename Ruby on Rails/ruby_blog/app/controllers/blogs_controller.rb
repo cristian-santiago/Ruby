@@ -15,10 +15,11 @@ class BlogsController < ApplicationController
   end
 
   def show    
+    
     @blog = Blog.find(params[:id])
     if @blog.nil?
       redirect_to :action => :index
-    end
+    end    
     
   end
 
@@ -61,6 +62,6 @@ class BlogsController < ApplicationController
 
 
   def blog_params
-    params.require(:blog).permit(:title, :content, :category_id)
+    params.require(:blog).permit(:title, :description, :content, :category_id)
   end
 end
