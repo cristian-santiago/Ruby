@@ -16,15 +16,32 @@
     overflow-y: hidden;
 
 }
+.card {
+    border: 0 !important;
+}
 
 
 .link-title {
     text-decoration: none;
+    
+    color: rgb(42, 53, 58);
+    transition: color 300ms ease-in-out;
+    transition-property: color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
 
 }
 .link-title:hover{
     text-decoration: none;
+    color: rgb(90, 112, 119);
+    transition: color 300ms ease-in-out;
+    transition-property: color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
 }
+
 .link-description{
     
     text-decoration: none;
@@ -58,19 +75,23 @@
     height: 60px;
     width: 60px;
     border: 2px lightblue solid;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+
 }
 
 .align-img-name{
     display:inline-flex;
     vertical-align: middle;
     align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 .name{
    
     margin-left: 1rem;
-    
+    color: rgb(90, 112, 119);
+    font-weight:bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 0.6rem;
 }
 
 .italic-text-tags{

@@ -2,23 +2,26 @@
   <div class="container py-5 h-100 " >
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-lg-9 col-xl-9">
-        <div class="card rounded-3 ">
+        <div class="card">
           <div class="card-body p-4 ">
             <h1 class="text-center my-3 pb-3">Ruby GO</h1>
                 
                                
-                <% @categories.map do |cat| %>
+              <!--  <% @categories.map do |cat| %>
                   <%= link_to cat.category.to_s, blogs_path(:cate => cat.id), class: "link btn btn-outline-secondary" %>
-                <%end%>
+                <%end%> 
+                -->
+                <h2>Latest Posts</h2>
+                <hr class="separator">
                 
-                <% @blogs.first(3).map do |blog|%>
+                <% @blogs.last(3).map do |blog|%>
                     <article class= "blog-card">
                         <h3 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h3>
                           
                             <p><%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %></p> 
                             <div class="align-img-name">
                               <%= image_tag("me.jpg", class: "creator-img") %>
-                              <h4 class="name">Cristian Santiago</h4>
+                              <h6 class="name">Cristian Santiago</h6>
                             </div> 
                               <p><%= blog.created_at.strftime("%d %b, %Y")%></p>
                             
