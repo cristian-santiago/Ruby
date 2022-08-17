@@ -14,6 +14,13 @@
   </head>
 
   <body>
+
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Ruby Go</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,14 +31,21 @@
         <li class="nav-item active">
           <%= link_to "Home", blogs_path, class: "nav-link"%>
         </li>
-               
+      
         <li class="dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="menu" aria-haspopup="true" aria-expanded="false">Blogs</a>
           <div class="dropdown-menu">
-            <%= link_to "Create Blog", new_blog_path, class: "dropdown-item" %>
-            <%= link_to "Categories", categories_path, class: "dropdown-item" %> 
-            <%= link_to "About", about_index_path, class: "dropdown-item"%>
-            <%= link_to "Log Out", blogs_path, class: "dropdown-item"%>         
+            <% if user_signed_in? %>
+              <%= link_to "Create Blog", new_blog_path, class: "dropdown-item" %>
+              <%= link_to "Categories", categories_path, class: "dropdown-item" %> 
+              <%= link_to "About", about_index_path, class: "dropdown-item"%>
+              <%= link_to 'Edit perfil', edit_user_registration_path, :class => 'dropdown-item' %> 
+              <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item"%>   
+            <%else%>
+             <%= link_to "About", about_index_path, class: "dropdown-item"%>
+              <%= link_to "Log In", user_session_path	, class: "dropdown-item"%> 
+            <% end%>
+
           </div>
         </li>
         
@@ -40,6 +54,7 @@
       </ul>
     </div>
   </nav>
+  
     <%= yield %>
 
   </body>

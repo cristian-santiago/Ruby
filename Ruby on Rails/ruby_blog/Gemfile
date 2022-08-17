@@ -50,6 +50,8 @@ gem "jquery-ui-rails"
 
 gem "activestorage"
 
+gem 'devise'
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"
