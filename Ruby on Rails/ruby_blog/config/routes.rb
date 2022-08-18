@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :all_blogs
+  #resources :all_blogs
   resources :about
   resources :categories
   resources :blogs
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root "blogs#index"  
+  root  "all_blogs#index"  
 
 end
 

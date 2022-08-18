@@ -21,7 +21,7 @@
                             <p><%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %></p> 
                             <div class="align-img-name">
                               <%= image_tag("me.jpg", class: "creator-img") %>
-                              <h6 class="name"><%= blog.user.username.capitalize %></h6>                            
+                              <h6 class="name"><%= blog.user.username %></h6>                            
                             </div> 
                               <p><%= blog.created_at.strftime("%d %b, %Y")%></p>
                             
