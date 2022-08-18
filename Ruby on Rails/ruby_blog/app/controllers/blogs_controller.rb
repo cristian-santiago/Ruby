@@ -11,11 +11,15 @@ class BlogsController < ApplicationController
     else
       @blogs = Blog.all.with_rich_text_content
     end
+
+
+    @users = User.all
+    
       
   end
 
   def show    
-    
+    #@user = User.find(params[:id])
     @blog = Blog.find(params[:id])
     if @blog.nil?
       redirect_to :action => :index
@@ -30,7 +34,7 @@ class BlogsController < ApplicationController
   
 
   def create
-    @users = User.all
+    #@users = User.all
     @blog = current_user.blogs.create!(blog_params)
     if @blog.save
       redirect_to @blog
@@ -44,6 +48,7 @@ class BlogsController < ApplicationController
   end
 
   def update
+    
     @blog = Blog.find(params[:id])
     if @blog.update(blog_params)
       redirect_to @blog

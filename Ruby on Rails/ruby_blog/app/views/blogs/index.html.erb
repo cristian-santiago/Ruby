@@ -21,7 +21,7 @@
                             <p><%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %></p> 
                             <div class="align-img-name">
                               <%= image_tag("me.jpg", class: "creator-img") %>
-                              <h6 class="name">Cristian Santiago</h6>
+                              <h6 class="name"><%= blog.user.username.capitalize %></h6>                            
                             </div> 
                               <p><%= blog.created_at.strftime("%d %b, %Y")%></p>
                             
@@ -33,8 +33,9 @@
 
                 <%end%> 
                 <div class = "align-center" >
-                  <%= link_to "Show all #{@blogs.count} posts.", all_blogs_path, class: "link-all-blogs btn btn-secondary" %>  
-                </div>                 
+                 <!--<%= link_to "Show all #{@blogs.count} posts.", all_blogs_path, class: "link-all-blogs btn btn-secondary" %>  -->
+                  <%= link_to "Show all posts.", all_blogs_path, class: "link-all-blogs btn btn-secondary" %>
+                </div>               
           </div>  
         </div>
       </div>

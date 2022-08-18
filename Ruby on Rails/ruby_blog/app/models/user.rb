@@ -11,11 +11,5 @@ class User < ApplicationRecord
 
   validates :username, presence: true
 
-'''  def self.find_for_database_authentication warden_condition
-    conditions = warden_condition.dup
-    login = conditions.delete(:login)
-    where(conditions).where(
-      ["lower(username) = :value OR lower(email) = :value",
-      { value: login}]).first
-  end'''
+
 end
