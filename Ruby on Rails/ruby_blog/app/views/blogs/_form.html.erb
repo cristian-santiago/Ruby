@@ -4,6 +4,8 @@
    <div class="col col-lg-9 col-xl-9">
     <div class="card rounded-3 ">
      <div class="card-body p-4 ">
+    <% if user_signed_in? %>
+           
       <h1 class="text-center my-3 pb-3">Create a New Blog Post</h1>
        <%= form_for @blog do |f| %>
         <div class="mb-3">                
@@ -26,6 +28,9 @@
             <%= f.submit class:"btn btn-secondary" %>
         </div>
        <%end%>
+    <% else%>  
+        
+    <%end%>
      </div>
     </div>
    </div>

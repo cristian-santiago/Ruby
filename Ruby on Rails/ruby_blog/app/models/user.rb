@@ -5,7 +5,17 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :blogs
-  attr_accessor :username
+  
+
+  attr_accessor :login
 
   validates :username, presence: true
+
+'''  def self.find_for_database_authentication warden_condition
+    conditions = warden_condition.dup
+    login = conditions.delete(:login)
+    where(conditions).where(
+      ["lower(username) = :value OR lower(email) = :value",
+      { value: login}]).first
+  end'''
 end
