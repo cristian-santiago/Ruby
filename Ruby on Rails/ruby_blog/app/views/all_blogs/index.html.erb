@@ -40,7 +40,7 @@
                   <h2>Latest Posts</h2>
                   <hr class="separator">
                   
-                  <% @blogs.last(4).map do |blog|%>
+                  <% @blogs.order("blogs.created_at DESC").first(3).map do |blog|%>
                       <article class= "blog-card">
                           <h3 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h3>
                             

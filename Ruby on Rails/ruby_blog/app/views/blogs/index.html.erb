@@ -6,11 +6,13 @@
           <div class="card-body p-4 ">
             <h1 class="text-center my-3 pb-3">Ruby GO</h1>
                 
-                               
-              <!--  <% @categories.map do |cat| %>
-                  <%= link_to cat.category.to_s, blogs_path(:cate => cat.id), class: "link btn btn-outline-secondary" %>
-                <%end%> 
-                -->
+                <% if false %>     
+                <!-- removed this feature from this view-->      
+                  <% @categories.map do |cat| %>
+                    <%= link_to cat.category.to_s, blogs_path(:cate => cat.id), class: "link btn btn-outline-secondary" %>
+                  <%end%>
+                <%end%>
+                
                 <h2>Latest Posts</h2>
                 <hr class="separator">
                 
@@ -27,15 +29,21 @@
                             
                             <p> <%= link_to blog.description.to_s, blog_path(blog.id), class: "link-description"%> </p>                              
                           
-                          <!-- Removed this feature, add description on blog
-                          <h5 > <%= link_to truncate(sanitize(blog.content.to_s, tags: []), length: 200) , blog_path(blog.id), class: "link-content"%></h5> -->
+                          <% if false %>
+                            <!-- Removed this feature, add description on blog -->
+                            <h5 > <%= link_to truncate(sanitize(blog.content.to_s, tags: []), length: 200) , blog_path(blog.id), class: "link-content"%></h5> 
+                          <%end%>
                     </article>           
 
                 <%end%> 
-                <div class = "align-center" >
-                 <!--<%= link_to "Show all #{@blogs.count} posts.", all_blogs_path, class: "link-all-blogs btn btn-secondary" %>  -->
-                  <%= link_to "Show all posts.", all_blogs_path, class: "link-all-blogs btn btn-secondary" %>
-                </div>               
+
+                <% if false  %>
+                  <!--Removed this block -->
+                  <div class = "align-center" >
+                    <%= link_to "Show all #{@blogs.count} posts.", all_blogs_path, class: "link-all-blogs btn btn-secondary" %>  
+                    <%= link_to "Show all posts.", all_blogs_path, class: "link-all-blogs btn btn-secondary" %> 
+                  </div> 
+                <% end %>
           </div>  
         </div>
       </div>
