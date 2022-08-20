@@ -74,8 +74,19 @@
     border-radius: 50%;
     height: 60px;
     width: 60px;
-    border: 2px lightblue solid;
+    
+    /*border: 2px lightblue solid;
+    border : 2px, -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    border: 2px, linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
 
+}
+
+.border-img{
+    
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, orange, red);
+    padding: 3px;
 }
 
 .align-img-name{
