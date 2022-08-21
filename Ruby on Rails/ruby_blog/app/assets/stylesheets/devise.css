@@ -19,6 +19,7 @@
 
 .gradient-custom-2 {
     /* fallback for old browsers */
+    
     background: #fccb90;
     
     /* Chrome 10-25, Safari 5.1-6 */
@@ -39,3 +40,119 @@
     border-bottom-right-radius: .3rem;
     }
     }
+
+.animated-img {
+    width: 250px;    
+    border-radius: 10px;
+    box-shadow: 0 0.2rem 0.5rem rgba(rgb(228, 224, 224), .60)
+        
+}
+
+/*----------------------------------------------------------------    */
+@keyframes slideInFromLeft {
+    0% {
+        
+        transform: translateX(-25%);
+        opacity: 0.4;
+    }
+    100% {
+        
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  
+  .slideFromLeft {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    text-align: center;
+    margin-bottom: 5%;
+    
+  }
+
+
+/*----------------------------------------------------------------    */
+  @keyframes slideInFromRight {
+    0% {
+        transform: translateX(30%);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  
+  .slideFromRight{
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    text-align: center;
+    margin-top: 5%;
+  }
+
+
+
+/*----------------------------------------------------------------    */
+ 
+.profilePictureExample{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;   
+    
+    background: linear-gradient(to right, orange, red);
+    
+}
+
+
+/*-------------------------------------------*/
+
+
+/* -- ARROW 4      -- */
+
+.arrow-4 {
+	/* duplicate the triange */
+	position: relative;
+	height: 0px; width: 0px;
+	border: 8px solid;
+	border-color: 
+		darkorange
+		darkorange
+		transparent
+		transparent;
+	transform: rotate(45deg); 
+}
+
+.arrow-4:before, .arrow-4:after {
+	content: '';
+	display: block;
+	position: absolute;
+	
+	/* set up more triangles */
+	height: 0; width: 0;
+	
+	/* half the parent border
+	   rounded up */
+	border: 5px solid;	
+}
+
+.arrow-4:before {
+	border-color:
+		darkorange
+		transparent
+		transparent
+		darkorange;
+	display: block;
+	top: -1px; right: 0px;
+	transform-origin: top right;
+	transform: rotate(45deg); 
+}
+
+.arrow-4:after {
+	border-color:
+		transparent
+		darkorange
+		darkorange
+		transparent;
+	top: 0px; right: -1px;
+	transform-origin: top right;
+	transform: rotate(-45deg);
+}
