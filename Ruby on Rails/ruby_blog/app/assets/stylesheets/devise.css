@@ -98,61 +98,36 @@
     height: 250px;
     width: 250px;   
     
-    background: linear-gradient(to right, orange, red);
     
+    
+}
+.profilePicBorder{
+
+  position: relative;
+  background: linear-gradient(to right, red, orange);  
+  padding: 3px;
 }
 
 
+
+.centralize-img{
+  display: block;
+  margin: 0 auto;
+  
+}
 /*-------------------------------------------*/
 
 
-/* -- ARROW 4      -- */
-
-.arrow-4 {
-	/* duplicate the triange */
-	position: relative;
-	height: 0px; width: 0px;
-	border: 8px solid;
-	border-color: 
-		darkorange
-		darkorange
-		transparent
-		transparent;
-	transform: rotate(45deg); 
+.arrow {
+  border: solid rgb(204, 39, 39);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
 }
 
-.arrow-4:before, .arrow-4:after {
-	content: '';
-	display: block;
-	position: absolute;
-	
-	/* set up more triangles */
-	height: 0; width: 0;
-	
-	/* half the parent border
-	   rounded up */
-	border: 5px solid;	
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  
 }
 
-.arrow-4:before {
-	border-color:
-		darkorange
-		transparent
-		transparent
-		darkorange;
-	display: block;
-	top: -1px; right: 0px;
-	transform-origin: top right;
-	transform: rotate(45deg); 
-}
-
-.arrow-4:after {
-	border-color:
-		transparent
-		darkorange
-		darkorange
-		transparent;
-	top: 0px; right: -1px;
-	transform-origin: top right;
-	transform: rotate(-45deg);
-}

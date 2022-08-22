@@ -7,10 +7,10 @@
             <div class="col-lg-6">
               <div class="card-body p-md-5 mx-md-4">
 
-                <div class="text-center ">
-                  <%= image_tag("ruby.png", style: "width: 61px")%>
-                  <h5 class="mt-1 mb-5 pb-1">Ruby Go</h5>
-                </div>
+                  <div class="text-center ">
+                    <%= image_tag("ruby.png", style: "width: 61px")%>
+                    <h5 class="mt-1 mb-5 pb-1">Ruby Go</h5>
+                  </div>
 
                 
                   <p>Edit your account</p>  
@@ -21,7 +21,13 @@
                         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", class: "form-control" %>
                         <%= f.label :email %>
                       </div>
-
+                      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                      <% end %>
+                    <div class="form-floating mb-3">                      
+                      <%= f.text_field :username, autofocus: true, autocomplete: "username",placeholder: "Username" , maxlength: 30, class: "form-control" %>
+                      <%= f.label :username %>
+                    </div>
                       <p><% if @minimum_password_length %>
                         <em>(minimum <%= @minimum_password_length %> characters)</em>
                         <% end %>
@@ -39,39 +45,42 @@
                         <%= f.label :password_confirmation %>
                       </div>
 
-                      <div class="form-floating">
+                      <div class="form-floating mb-3">
                         
                         <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "current-password", class: "form-control" %>
-                        <%= f.label :current_password , "Current Password" %> 
-                        <i>(we need your current password to confirm your changes)</i>
+                        <%= f.label :current_password , "Current Password" %>                         
                       </div>
 
                       <div >
                         <%= f.submit "Update", class: "btn btn-primary col-12 mx-auto  gradient-custom-2 mb-3 btn-margin" %>
                       </div>
-                  <% end %>                  
-                <div class="text-center">
-                  <p class= "text-center">Unhappy? &#128546; </p> 
-                  <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-outline-danger" %>
+                     
+                  <% if false %>
+                  <div class="text-center">
+                    <p class= "text-center">Unhappy? &#128546; </p> 
+                    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-outline-danger" %>
+                  </div>     
+                  <% end %>             
+                  <%= link_to "", root_path, class: "arrow left" %>
                 </div>
-                <div class= "arrow-4">
-                </div>
-                  <%= link_to "Back", root_path %>
-              
+            </div>
+                <div class="col-lg-6 d-flex justify-content-center gradient-custom-2">
+                  <div class="text-white px-3 py-4 p-md-5 mx-md-4 mt-5">
+                    <div >
+                      <%= image_tag("me.jpg", class: "profilePictureExample profilePicBorder centralize-img ")%>
+                    </div >
+                    <div class="mt-4" >
+                    <h4 >Change your profile picture</h4>
+                    </div>
+                   
+                   <div>
 
-                  
-              </div>
-            </div>
-            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-              <div class="text-white px-3 py-4 p-md-5 mx-md-4 ">
-                <div >
-                  <%= image_tag("me.jpg", class: "profilePictureExample ")%>
-                </div >
-                <h4 class="mb-4">Change your profile picture</h4>
-               
-                  
-              </div>
-            </div>
+                      <%= f.file_field :avatar %>
+                    </div>
+                    <%end%>
+                      
+                  </div>
+                </div>
           </div>
         </div>
       </div>
