@@ -15,6 +15,9 @@ class BlogsController < ApplicationController
 
     @users = User.all
     
+    if params[:search]
+      search_blog
+    end
       
   end
 
@@ -45,12 +48,27 @@ class BlogsController < ApplicationController
 
   def edit
     @blog = Blog.find(params[:id])
+
+    if current_user.id == @blog.user_id
+    
+    else
+      redirect_to root_path
+    end
+  end
+
+  def search_blog
+
+    if @blog = Blog.all.find{|blog| blog.title.include?(params[:search])}
+      redirect_to root_path(@blog)
+    end
   end
 
   def update
     
     @blog = Blog.find(params[:id])
-    if @blog.update(blog_params)
+    
+    if current_user.id == @blog.user_id
+      @blog.update(blog_params)
       redirect_to @blog
     else
       render :edit

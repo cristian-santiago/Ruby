@@ -6,10 +6,12 @@ class User < ApplicationRecord
 
   has_many :blogs
   has_one_attached :avatar
+    
 
   attr_accessor :login
 
   validates :username, presence: true
 
+  
 
 end

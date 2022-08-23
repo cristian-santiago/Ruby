@@ -56,7 +56,8 @@
                       <%= link_to "Log in", new_session_path(resource_name) , class: "btn btn-outline-danger" %>
                     </div>
 
-                  <%end%>                  
+                  <%end%>
+                                      
                     </div>
                   </div>
                   <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
@@ -80,22 +81,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  $(document).ready(function () {
-    
-      $("#btn-login").click(function(){
-        
-        
-        $("#box").animate({
-          left: '150px',
-          
-
-
-        }, 3000)
-      })
-
-  });
-
-</script>
-

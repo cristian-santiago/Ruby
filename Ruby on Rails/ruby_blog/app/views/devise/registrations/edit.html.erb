@@ -50,8 +50,8 @@
                         <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "current-password", class: "form-control" %>
                         <%= f.label :current_password , "Current Password" %>                         
                       </div>
-
-                      <div >
+                      
+                      <div class= "actions" >
                         <%= f.submit "Update", class: "btn btn-primary col-12 mx-auto  gradient-custom-2 mb-3 btn-margin" %>
                       </div>
                      
@@ -67,17 +67,24 @@
                 <div class="col-lg-6 d-flex justify-content-center gradient-custom-2">
                   <div class="text-white px-3 py-4 p-md-5 mx-md-4 mt-5">
                     <div >
-                      <%= image_tag("me.jpg", class: "profilePictureExample profilePicBorder centralize-img ")%>
+                      <% if @user.avatar.present? %>
+                        <%= image_tag(@user.avatar, class: "profilePictureExample profilePicBorder centralizeSelectFile ")%>
+                      <%else%>
+                        <%= image_tag( "no-user-icon.jpg", class: "profilePictureExample profilePicBorder centralizeSelectFile ")%>
+                      <%end%>
                     </div >
-                    <div class="mt-4" >
+                    <div class= " d-flex justify-content-center mt-4" >
                     <h4 >Change your profile picture</h4>
                     </div>
-                   
-                   <div>
+                   <div class=" formFile mt-2 " >
 
-                      <%= f.file_field :avatar %>
+                      <%= f.file_field :avatar, class: "form-control  " %>
                     </div>
+                   
                     <%end%>
+                    <div class=" d-flex justify-content-center py-4 mt-5 ">
+                      <%= image_tag("edit-icon.png", style: "width: 150px")%>
+                    </div>
                       
                   </div>
                 </div>

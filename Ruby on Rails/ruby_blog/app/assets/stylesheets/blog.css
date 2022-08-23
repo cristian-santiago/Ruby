@@ -75,11 +75,13 @@
     height: 60px;
     width: 60px;
     
+    background: white;
     /*border: 2px lightblue solid;
     border : 2px, -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
     border: 2px, linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
 
 }
+
 
 .border-img{
     
@@ -87,6 +89,7 @@
     position: relative;
     background: linear-gradient(to right, orange, red);
     padding: 3px;
+    
 }
 
 .align-img-name{
