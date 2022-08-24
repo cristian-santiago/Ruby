@@ -11,7 +11,22 @@ class AllBlogsController < ApplicationController
     else
       @blogs = Blog.all.with_rich_text_content
     end
-      
+    
+          
+    @blogs = Blog.search(params[:search])
+         
   end
+
+
+  private
+
+
+  def blog_params
+    params.require(:blog).permit(:title, :description, :content, :category_id, :user_id, :search)
+    
+  end
+
+
+
   
 end

@@ -1,3 +1,4 @@
+
 <section class="h-100 gradient-form" style="background-color: #eee;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -51,7 +52,7 @@
                         <%= f.label :current_password , "Current Password" %>                         
                       </div>
                       
-                      <div class= "actions" >
+                      <div class= "actions" id="update" >
                         <%= f.submit "Update", class: "btn btn-primary col-12 mx-auto  gradient-custom-2 mb-3 btn-margin" %>
                       </div>
                      
@@ -67,7 +68,7 @@
                 <div class="col-lg-6 d-flex justify-content-center gradient-custom-2">
                   <div class="text-white px-3 py-4 p-md-5 mx-md-4 mt-5">
                     <div >
-                      <% if @user.avatar.present? %>
+                      <% if @user.avatar.attached? %>
                         <%= image_tag(@user.avatar, class: "profilePictureExample profilePicBorder centralizeSelectFile ")%>
                       <%else%>
                         <%= image_tag( "no-user-icon.jpg", class: "profilePictureExample profilePicBorder centralizeSelectFile ")%>
@@ -76,9 +77,9 @@
                     <div class= " d-flex justify-content-center mt-4" >
                     <h4 >Change your profile picture</h4>
                     </div>
-                   <div class=" formFile mt-2 " >
+                   <div class=" formFile mt-2" id="update" >
 
-                      <%= f.file_field :avatar, class: "form-control  " %>
+                      <%= f.file_field :avatar,  class: "form-control  " %>
                     </div>
                    
                     <%end%>
@@ -94,3 +95,21 @@
     </div>
   </div>
 </section>
+<script >
+
+(function()
+/* This fuction helps to fix the issue related to page that don't get the active storage content after load the page 'Edit Profile' */
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
+</script>

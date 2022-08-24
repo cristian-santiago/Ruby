@@ -13,11 +13,7 @@ class BlogsController < ApplicationController
     end
 
 
-    @users = User.all
-    
-    if params[:search]
-      search_blog
-    end
+  
       
   end
 
@@ -56,13 +52,7 @@ class BlogsController < ApplicationController
     end
   end
 
-  def search_blog
-
-    if @blog = Blog.all.find{|blog| blog.title.include?(params[:search])}
-      redirect_to root_path(@blog)
-    end
-  end
-
+ 
   def update
     
     @blog = Blog.find(params[:id])

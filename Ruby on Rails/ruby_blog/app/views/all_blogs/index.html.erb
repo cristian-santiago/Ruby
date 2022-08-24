@@ -7,7 +7,7 @@
             <h1 class="text-center my-3 pb-3">Ruby GO</h1>               
                 <% if user_signed_in?%>
 
-                <%= form_tag(@blog_path, method: :get) do %>
+                <%= form_tag(@blogs_path, method: :get) do %>
                         <p><%= text_field_tag(:search, params[:search], placeholder: "Search for a blog here.", class: "form-control") %></p>
                         <%= submit_tag("Search",  class: "btn btn-primary")%>
                       <%end%>

@@ -1,7 +1,3 @@
-.size-field{
-    
-}
-
 .centralize-form{
 
     margin-left: 30% ;
@@ -131,3 +127,13 @@
   
 }
 
+
+
+.linkResetPwd{
+  text-decoration: none;
+  color: red; 
+}
+.linkResetPwd:hover{
+  text-decoration: none;
+  color: orange;
+}
