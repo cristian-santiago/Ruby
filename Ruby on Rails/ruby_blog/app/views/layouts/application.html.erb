@@ -23,7 +23,7 @@
       <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Ruby Go</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -54,22 +54,31 @@
 
           </div>
         </li>
-          <li >
-            <nav class="navbar bg-light">
-            <div class="container-fluid ">
-              <form class="d-flex" >
-                
-                
-                 <%= text_field_tag(:search, params[:search], placeholder: "Search for a blog here.", class: "form-control me-2 ") %>
-                 <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+         
+            </ul>
             </div>
-          </nav>
-        </li>
-          
-        
-      </ul>
-    </div>
+
+              <%if false%>
+              
+                  <div>
+
+              <form class="  d-flex search" >
+              
+                 <%= form_tag(@blogs_path, method: :get) do %>
+                        
+                      
+                  <%= text_field_tag(:search, params[:search], placeholder: "Search for a blog here.", class: "form-control me-2 ") %>
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+             
+                
+                    
+                    </form>
+                  
+                <%end%>
+
+                  </div>
+                  <%end%>
+
   </nav>
   
     <%= yield %>

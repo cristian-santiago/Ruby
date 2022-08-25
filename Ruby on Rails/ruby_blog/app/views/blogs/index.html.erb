@@ -1,3 +1,4 @@
+</div>
 <section class="vh-150  py-5 " >
   <div class="container py-5 h-100 " >
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -23,7 +24,7 @@
                             <p><%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %></p> 
                             <div class="align-img-name">
                               <%= image_tag("blogs.png", class: "creator-img border-img") %>
-                              <h6 class="name"><%= "blog.user.username" %></h6>                            
+                              <h6 class="name"><%= blog.user.username %></h6>                            
                             </div> 
                               <p><%= blog.created_at.strftime("%d %b, %Y")%></p>
                             

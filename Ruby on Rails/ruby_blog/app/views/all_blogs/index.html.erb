@@ -1,3 +1,23 @@
+
+              
+<div>
+
+  <form class="  d-flex search" >
+
+  <%= form_tag(@blogs_path, method: :get) do %>
+        
+      
+  <%= text_field_tag(:search, params[:search], placeholder: "Search for a blog here.", maxlength: 50, class: "form-control me-2 ") %>
+  <button class="btn btn-outline-secondary" type="submit">Search</button>
+
+
+    
+    </form>
+
+  <%end%>
+
+</div>
+                  
 <section class="vh-150  py-5 " >
   <div class="container py-5 h-100 " >
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -6,11 +26,8 @@
           <div class="card-body p-4 ">
             <h1 class="text-center my-3 pb-3">Ruby GO</h1>               
                 <% if user_signed_in?%>
-
-                <%= form_tag(@blogs_path, method: :get) do %>
-                        <p><%= text_field_tag(:search, params[:search], placeholder: "Search for a blog here.", class: "form-control") %></p>
-                        <%= submit_tag("Search",  class: "btn btn-primary")%>
-                      <%end%>
+        
+        
                   <h2 > All Categories</h2>                
                   <hr class="separator">
                   
