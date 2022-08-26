@@ -15,30 +15,28 @@
 
   </head>
 
-  <body>
+  <body >
 
-      <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Ruby Go</a>
+     
+  <nav class="navbar navbar-expand-sm navbar-light application pt-1">
+    <h3><%= link_to "Ruby Go", root_path, class: "navbar-brand navTextColor "%></h3>
+    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse " id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <%= link_to "Home", root_path, class: "nav-link"%>
+        
+          <%= link_to "Home", root_path, class: "nav-link navTextColor "%>
           
         </li>
       
       
         <li class="dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="menu" aria-haspopup="true" aria-expanded="false">Blogs</a>
-          <div class="dropdown-menu">
+        
+          <a class="nav-link dropdown-toggle navTextColor" data-toggle="dropdown" href="#" role="menu" aria-haspopup="true" aria-expanded="false">Blogs</a>
+          <div class="dropdown-menu ">
             <% if user_signed_in? %>
               <%= link_to "Create Blog", new_blog_path, class: "dropdown-item" %>
               <%= link_to "Categories", categories_path, class: "dropdown-item" %> 
@@ -47,41 +45,48 @@
               <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item"%>   
             
                 
-            <%else%>  
-              <%= link_to "About", about_index_path, class: "dropdown-item"%>
-              <%= link_to "Log In", user_session_path	, class: "dropdown-item"%>
-            <% end%>
+                  <%else%>  
+                    <%= link_to "About", about_index_path, class: "dropdown-item"%>
+                    <%= link_to "Log In", user_session_path	, class: "dropdown-item"%>
+                  <% end%>
 
-          </div>
-        </li>
-         
-            </ul>
-            </div>
-
-              <%if false%>
+                </div>
+              </li>
               
-                  <div>
-
-              <form class="  d-flex search" >
-              
-                 <%= form_tag(@blogs_path, method: :get) do %>
-                        
-                      
-                  <%= text_field_tag(:search, params[:search], placeholder: "Search for a blog here.", class: "form-control me-2 ") %>
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-             
-                
-                    
-                    </form>
-                  
-                <%end%>
-
+                  </ul>
                   </div>
-                  <%end%>
+
+                    <%if false%>
+                    
+                        <div>
+
+                    <form class="  d-flex search" >
+                    
+                      <%= form_tag(@blogs_path, method: :get) do %>
+                              
+                            
+                        <%= text_field_tag(:search, params[:search], placeholder: "Search for a blog here.", class: "form-control me-2 ") %>
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                  
+                      
+                          
+                          </form>
+                        
+                      <%end%>
+
+                        </div>
+            <%end%>
 
   </nav>
-  
-    <%= yield %>
 
+   <% if notice %>
+        <p class="alert alert-success mb-0"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger mb-0"><%= alert %></p>
+      <% end %>
+    <%= yield %>
+   
   </body>
+  
 </html>

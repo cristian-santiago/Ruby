@@ -3,6 +3,8 @@ class Blog < ApplicationRecord
     has_rich_text :content    
     has_one_attached  :image
     belongs_to :user
+    
+    
 
     def self.search(search)
         if search 

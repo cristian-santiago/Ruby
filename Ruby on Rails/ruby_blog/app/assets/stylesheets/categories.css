@@ -45,7 +45,7 @@
 
 
 .variant:nth-child(odd) {
-    background-color: hsl(240, 100%, 90%);
+    background: hsl(240, 100%, 90%);
     color: hsl(240,100%,30%);
 
   }
@@ -80,3 +80,5 @@
     background-color: hsl(39, 100%, 80%);
     color: hsl(39, 100%, 25%)
 }
+/*---------------*/
+
