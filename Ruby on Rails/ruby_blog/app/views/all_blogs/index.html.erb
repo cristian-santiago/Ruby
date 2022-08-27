@@ -44,7 +44,8 @@
                       <article class= "blog-card">
                           <h3 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h3>
                           <div class = "mb-3 mt-3">
-                             <%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %>
+                             <%= link_to blog.category.category, blogs_path(:cate => blog.category_id), class: "link btn btn-outline-secondary" %>
+                             <%= link_to blog.category2_id, blogs_path(:cate => blog.category2_id), class: "link btn btn-outline-secondary" %>
                              
                             </div> 
                             <div class="align-img-name">
@@ -75,6 +76,7 @@
                           <h3 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h3>
                             
                               <p><%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %></p> 
+                              <p><%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %></p>
                               <div class="align-img-name">
                                 <% if blog.user.avatar.present? %>
                                   <%= image_tag(blog.user.avatar, class: "creator-img border-img") %>

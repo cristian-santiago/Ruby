@@ -3,12 +3,17 @@ class BlogsController < ApplicationController
   def index
     
     @categories = Category.all
+    
     cate = params[:cate]
     
     if !cate.nil?
       @blogs = Blog.where(:category_id => cate)
+    elsif
+      @blogs = Blog.where(:category2_id => cate)
+    
       
-    else
+    elsif
+
       @blogs = Blog.all.with_rich_text_content
     end
 
@@ -78,7 +83,7 @@ class BlogsController < ApplicationController
 
 
   def blog_params
-    params.require(:blog).permit(:title, :description, :content, :category_id, :user_id)
+    params.require(:blog).permit(:title, :description, :content, :category_id, :category2_id, :user_id, )
     
   end
 end

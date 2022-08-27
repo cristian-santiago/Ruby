@@ -9,7 +9,8 @@
               <article class="blog-card">
                   <h3><%= @blog.title %></h3>
                   
-                    <p>Tags: <%= link_to @blog.category.category, blogs_path(:cate => @blog.category.id), class: "italic-text-tags" %></p>
+                    <p>Tags: <%= link_to @blog.category_id, blogs_path(:cate => @blog.category_id), class: "italic-text-tags" %></p>
+                    <p>Tags: <%= link_to @blog.category2_id, blogs_path(:cate => @blog.category2_id), class: "italic-text-tags" %></p>
                   <%= @blog.content %>
               </article>
 

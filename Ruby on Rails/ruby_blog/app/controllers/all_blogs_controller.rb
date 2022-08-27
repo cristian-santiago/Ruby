@@ -2,12 +2,12 @@ class AllBlogsController < ApplicationController
   #before_action :authenticate_user!
   def index
     @users = User.all
+    
     @categories = Category.all
     cate = params[:cate]
     
     if !cate.nil?
       @blogs = Blog.where(:category_id => cate)
-      
     else
       @blogs = Blog.all.with_rich_text_content
     end
@@ -22,7 +22,7 @@ class AllBlogsController < ApplicationController
 
 
   def blog_params
-    params.require(:blog).permit(:title, :description, :content, :category_id, :user_id, :search)
+    params.require(:blog).permit(:title, :description, :content, :category_id, :category2_id, :user_id, :search)
     
   end
 

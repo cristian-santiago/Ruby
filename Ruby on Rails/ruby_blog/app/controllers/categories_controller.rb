@@ -25,7 +25,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     
-
+    
     respond_to do |format|
       if @category.save
         format.html { redirect_to category_url(@category), notice: "Category was successfully created." }
@@ -69,6 +69,6 @@ class CategoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def category_params
-      params.require(:category).permit(:category)
+      params.require(:category).permit(:category, :category2)
     end
 end

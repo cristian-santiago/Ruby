@@ -22,10 +22,13 @@
             <%= f.rich_text_area :content, required: true, placeholder: "Start your post content...", class: "form-control", rows: "60"%>
         </div>
         <div class="mb-3 size"> 
-            <label for="categories" class="form-label">Select Categories</label>                                        
+            <label for="categories" class="form-label">Select the first category</label>                                        
             <%= f.select :category_id,  Category.all.map { |c| [c.category, c.id]}, {include_blank: true}, {class: "form-control"} %>                                                                                                                     
         </div>  
-            
+        <div class="mb-3 size"> 
+            <label for="categories2" class="form-label">Select the second category</label>                                        
+            <%= f.select :category2_id,  Category.all.map { |c| [c.category, c.id]}, {include_blank: true}, {class: "form-control"} %>                                                                                                                     
+        </div> 
         <div >                                    
             <%= f.submit class:"btn btn-secondary" %>
         </div>
