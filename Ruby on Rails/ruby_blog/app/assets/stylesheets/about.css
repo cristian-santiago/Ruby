@@ -6,6 +6,7 @@
  overflow: hidden;
  width: 300px;
  height: 300px;
+ margin-bottom: 20%;
 }
 .diamond {
  transform: rotate(45deg) translateY(-25px) translateX(-25px);
@@ -19,3 +20,44 @@
  width: 100%;
  height: auto;
 }
+
+
+@keyframes slideInFromLeft {
+    0% {
+        
+        transform: translateX(-25%);
+        opacity: 0.4;
+    }
+    100% {
+        
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  
+  .slideAboutFromLeft {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    
+    margin-bottom: 5%;
+    
+  }
+
+
+/*----------------------------------------------------------------    */
+  @keyframes slideInFromRight {
+    0% {
+        transform: translateX(25%);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  
+  .slideAboutFromRight{
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    
+    margin-top: 5%;
+  }

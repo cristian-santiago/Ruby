@@ -22,7 +22,7 @@ class AllBlogsController < ApplicationController
 
 
   def blog_params
-    params.require(:blog).permit(:title, :description, :content, :category_id, :category2_id, :user_id, :search)
+    params.require(:blog).permit(:title, :description, :content, :category_id, :user_id, :search)
     
   end
 

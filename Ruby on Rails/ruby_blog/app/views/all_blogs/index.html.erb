@@ -1,5 +1,3 @@
-
-              
 <div>
 
   <form class="  d-flex search" >
@@ -24,7 +22,10 @@
       <div class="col col-lg-9 col-xl-9 " >
         <div class="card">
           <div class="card-body p-4 ">
-            <h1 class="text-center my-3 pb-3">Ruby GO</h1>               
+             <div class="text-center my-3 pb-3">
+              <%= image_tag("https://cdn.emojidex.com/emoji/xxxhdpi/Ruby.png", class:'mb-2 mt-2')%>
+              <h1 >Ruby Go </h1>  
+             </div>              
                 <% if user_signed_in?%>
         
         
@@ -45,7 +46,7 @@
                           <h3 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h3>
                           <div class = "mb-3 mt-3">
                              <%= link_to blog.category.category, blogs_path(:cate => blog.category_id), class: "link btn btn-outline-secondary" %>
-                             <%= link_to blog.category2_id, blogs_path(:cate => blog.category2_id), class: "link btn btn-outline-secondary" %>
+                             
                              
                             </div> 
                             <div class="align-img-name">
@@ -76,7 +77,7 @@
                           <h3 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h3>
                             
                               <p><%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %></p> 
-                              <p><%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %></p>
+                              
                               <div class="align-img-name">
                                 <% if blog.user.avatar.present? %>
                                   <%= image_tag(blog.user.avatar, class: "creator-img border-img") %>
