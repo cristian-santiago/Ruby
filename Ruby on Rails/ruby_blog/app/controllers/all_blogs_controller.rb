@@ -8,8 +8,10 @@ class AllBlogsController < ApplicationController
     
     if !cate.nil?
       @blogs = Blog.where(:category_id => cate)
+     
     else
       @blogs = Blog.all.with_rich_text_content
+
     end
     
           

@@ -1,19 +1,16 @@
-<div>
-
-  <form class="  d-flex search" >
-
-  <%= form_tag(@blogs_path, method: :get) do %>
+<div >
+  <form class="d-flex search" >
+    <%= form_tag(@blogs_path, method: :get) do %>
+      
+      
+        <%= text_field_tag(:search, params[:search], placeholder: "Search for a blog here", maxlength: 50, class: "form-control me-2 ") %>
+        
+        <button class="btn btn-outline-light" type="submit">Search</button>    
         
       
-  <%= text_field_tag(:search, params[:search], placeholder: "Search for a blog here.", maxlength: 50, class: "form-control me-2 ") %>
-  <button class="btn btn-outline-secondary" type="submit">Search</button>
-
-
-    
-    </form>
-
-  <%end%>
-
+      
+    <%end%>
+  </form>
 </div>
                   
 <section class="vh-150  py-5 " >
@@ -34,7 +31,7 @@
                   
                   <div >                
                     <% @categories.map do |cat| %>
-                      <%= link_to cat.category.to_s, blogs_path(:cate => cat.id), class: "link variant" %>
+                      <%= link_to cat.category, blogs_path(:cate => cat.id), class: "link variant" %>
                     <%end%>
                   </div>   
 
@@ -43,7 +40,7 @@
 
                   <% @blogs.order("blogs.created_at DESC").map do |blog|%>
                       <article class= "blog-card">
-                          <h3 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h3>
+                          <h2 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h2>
                           <div class = "mb-3 mt-3">
                              <%= link_to blog.category.category, blogs_path(:cate => blog.category_id), class: "link btn btn-outline-secondary" %>
                              
@@ -56,9 +53,9 @@
                                   <%= image_tag("no-user-icon.jpg", class: "creator-img border-img") %>
                                 <%end%>
                                 
-                                <h6 class="name"><%= blog.user.username %></h6>
+                                <h5 class="name"><%= blog.user.username %></h5>
                               </div>
-                              <p><%= blog.created_at.strftime("%d %b, %Y")%></p>                        
+                              <h6><%= blog.created_at.strftime("%d %b, %Y")%></h6>                        
                             <p> <%= link_to blog.description.to_s, blog_path(blog.id), class: "link-description"%> </p> 
                             <!-- 
                             <h5 > <%= link_to truncate(sanitize(blog.content.to_s, tags: []), length: 200) , blog_path(blog.id), class: "link-content"%></h5> 
@@ -74,7 +71,7 @@
                   
                   <% @blogs.order("blogs.created_at DESC").first(3).map do |blog|%>
                       <article class= "blog-card">
-                          <h3 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h3>
+                          <h2 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h2>
                             
                               <p><%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary" %></p> 
                               
@@ -84,9 +81,9 @@
                                 <%else%>
                                   <%= image_tag("no-user-icon.jpg", class: "creator-img border-img") %>
                                 <%end%>
-                                <h6 class="name"><%= blog.user.username %></h6>                            
+                                <h5 class="name"><%= blog.user.username %></h5>                            
                               </div> 
-                                <p><%= blog.created_at.strftime("%d %b, %Y")%></p>
+                                <h6><%= blog.created_at.strftime("%d %b, %Y")%></h6>
                               
                               <p> <%= link_to blog.description.to_s, blog_path(blog.id), class: "link-description"%> </p>                              
                             
@@ -108,6 +105,3 @@
   
 </section>  
 
- <footer >
-        Developed by Cristian Santiago - &copy; <%= Date.current.year %>
-</footer>

@@ -10,7 +10,7 @@ class BlogsController < ApplicationController
       @blogs = Blog.where(:category_id => cate)
     else
 
-      @blogs = Blog.all.with_rich_text_content
+      redirect_to root_path
     end
 
 

@@ -12,7 +12,7 @@
 
                     <div class="dia">
 
-                        <%= image_tag ("me.jpg")%>
+                        <%= image_tag("me.jpg")%>
                     </div>
                     </div>
                 </div>
@@ -21,38 +21,44 @@
                 <section class="slideAboutFromLeft">
                 <hr class="separator ">
                 <h1 class="text-center">About </h1>
-                 
+                 <div class="text-justify">
                     <p >Hi, I'm Cristian Santiago. I'm a Support Engineer  who loves to programming in Ruby and Python.
                         I created this Blog based on Ruby on Rails as a funny and super challenged exercise!!
                         Now I'm able to share my own Ruby content, get colaboration from other user's post
                         and improve new features on this application!!  </p>
-                    
+                  </div>
                 </section>
                 
                 <section class="slideAboutFromRight">
                 <hr class="separator">
                 
                 <h4 class="text-center">Contacts</h4>
-                
+                  <div class="text-justify mt-3" >
                     <p> You can find a piece of me on the following links below, I'll be very glad to get your feedback!
                         Your suggestions are always welcome! </p>
-                
+                  </div>
+                  <div class= "text-center mt-4 ">
+                        <%=link_to image_tag("github.svg", class: "contactIcons"), "https://github.com/cristian-santiago" %>
+                        <%=link_to image_tag("linkedin.svg", class: "contactIcons"), "https://www.linkedin.com/in/eng-cristian/" %>
+                        <%=link_to image_tag("instagram.svg", class: "contactIcons"), "https://www.instagram.com/eng_cristian/"%>
+                        <%=link_to image_tag("facebook.svg", class: "contactIcons"), "https://www.facebook.com/cristian.santiago.3726" %>
+                        <%=mail_to  "cristian.santiago.carvalho@gmail.com", raw(image_tag("email.svg", class: "contactIcons"))%>
+                  </div>
                 </section>
                  
                  <section class="slideAboutFromLeft">
-                 <hr class="separator">
-                    <h4 class="text-center">More about me</h4>
-                    <p>I'm from Rio de Janeiro, Brazil and I hold a BE degree in Control and Automation Engineering from the <a href="https://estacio.br/" >Universidade Estácio de Sá</a>.
-                    Currently I'm working as a Support Engineer at <a href="https://www.intelie.ai/" > Intelie by Viasat.</a></p>
+                  <hr class="separator">
 
-                    <p>Recently I'm learing to develop using Ruby as the programming language and Ruby on Rails as framework, but I'm used to play with Python
-                    for Data Science and Machine Learning.</p>
-
-
+                    <h4 class="text-center mt-4">More about me</h4>
                     
+                    <div class="text-justify mt-3 ">
+                      <p>I'm from Rio de Janeiro, Brazil and I hold a BE degree in Control and Automation Engineering from the <a href="https://estacio.br/" >Universidade Estácio de Sá</a>.
+                      Currently I'm working as a Support Engineer at <a href="https://www.intelie.ai/" > Intelie by Viasat.</a></p>
 
-
-                </section>
+                      <p>Recently I'm learing to develop using Ruby as the programming language and Ruby on Rails as framework, but I'm used to play with Python
+                      for Data Science and Machine Learning.</p>
+                    </div> 
+                  </section>
 
                 <div>
 

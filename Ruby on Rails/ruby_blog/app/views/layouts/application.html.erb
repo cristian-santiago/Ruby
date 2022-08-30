@@ -15,7 +15,7 @@
 
   </head>
 
-  <body >
+  <body  class="ptsans" >
 
      
   <nav class="navbar navbar-expand-sm navbar-light application pt-1">
@@ -38,10 +38,9 @@
           <a class="nav-link dropdown-toggle navTextColor" data-toggle="dropdown" href="#" role="menu" aria-haspopup="true" aria-expanded="false">Blogs</a>
           <div class="dropdown-menu ">
             <% if user_signed_in? %>
-              <%= link_to "Create Blog", new_blog_path, class: "dropdown-item" %>
-              <%= link_to "Categories", categories_path, class: "dropdown-item" %> 
-              <%= link_to "About", about_index_path, class: "dropdown-item"%>
-              <%= link_to 'Edit perfil', edit_user_registration_path, :class => 'dropdown-item' %> 
+              <%= link_to "Create a Post", new_blog_path, class: "dropdown-item" %>      
+              <%= link_to 'Edit Perfil', edit_user_registration_path, :class => 'dropdown-item' %>        
+              <%= link_to "About", about_index_path, class: "dropdown-item"%>               
               <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item"%>   
             
                 
@@ -88,5 +87,15 @@
     <%= yield %>
    
   </body>
+<footer >
+      <div class= "pt-3 mt-4">
+        Developed by Cristian Santiago - &copy; <%= Date.current.year %>
+      </div>
+            <div class= "mt-4 footerImg ">
+              <%=link_to image_tag("github.svg", class: "contactIcons"), "https://github.com/cristian-santiago" %>
+              <%=link_to image_tag("linkedin.svg", class: "contactIcons"), "https://www.linkedin.com/in/eng-cristian/" %>
+              <%=link_to image_tag("instagram.svg", class: "contactIcons"), "https://www.instagram.com/eng_cristian/"%>
+            </div>
+</footer>
   
 </html>
