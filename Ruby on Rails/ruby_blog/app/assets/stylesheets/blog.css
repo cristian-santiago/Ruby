@@ -1,3 +1,4 @@
+/* Blog card that contains the post info */
 .blog-card {
     margin-top: 20px;
     background-color: #ebebeb;
@@ -20,7 +21,12 @@
     border: 0 !important;
 }
 
+.contentBlog{
+    min-height: calc(70vh - 40px);
+}
 
+
+/* Link from Title, Description and all blogs page */
 .link-title {
     text-decoration: none;
     
@@ -67,7 +73,10 @@
 .align-center{
     text-align: center;
     margin-top: 1rem;
+
 }
+
+/* Image creater, name and links */
 
 .creator-img{
 

@@ -1,3 +1,5 @@
+/* Search bar from root_path */
+
 .search{
     
     margin-right: 20px;
@@ -8,7 +10,7 @@
     position: relative;
 
 }
-
+/* Application style  */
 .application{
 
     background: #fccb90;
@@ -42,7 +44,7 @@
 
 
 
-/*-----*/
+/* Footer and footer img*/
 
 footer{
     text-align: center;    
@@ -55,7 +57,7 @@ footer{
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to left, orange, rgb(255, 30, 0));
 
-    padding-bottom: 2%;    
+    padding-bottom: 1.7rem;    
        
     
 }
@@ -67,17 +69,10 @@ footer{
           
 }
 
-.contentBlog{
-    min-height: calc(40vh - 40px);
-}
 
 
-/*-------*/
+/* Custom fontes */
 
-.btn {
-    font-family: "ptsans";
-
-}
 
 .ptsans {
     font-family: "ptsans";
@@ -91,6 +86,4 @@ footer{
     src: url("ptsans-regular.woff") format("woff"),
    
     }
-    
-    
-    
+ 
