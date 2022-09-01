@@ -33,7 +33,7 @@
                     <h2> Posts </h2>
                     <hr class="separator">
 
-                  <% @blogs.order("blogs.created_at DESC").map do |blog|%>
+                  <% @blogs.map do |blog|%>
                       <article class= "blog-card">
                           <h2 ><%= link_to blog.title, blog_path(blog.id), class: "link-title" %> </h2>
                           <div class = "mb-3 mt-3">
@@ -42,7 +42,7 @@
                              
                             </div> 
                             <div class="align-img-name">
-                                <% if blog.user.avatar.present? %>
+                                <% if blog.user.avatar.nil? %>
                                   <%= image_tag(blog.user.avatar, class: "creator-img border-img") %>
                                 <%else%>
                                   <%= image_tag("no-user-icon.jpg", class: "creator-img border-img") %>

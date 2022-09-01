@@ -27,7 +27,11 @@
                               <p><%= link_to blog.category.category, blogs_path(:cate => blog.category.id), class: "link btn btn-outline-secondary mt-3" %></p>
                               
                               <div class="align-img-name">
-                                <%= image_tag("blogs.png", class: "creator-img border-img") %>
+                                  <% if blog.user.avatar.persisted? %>
+                                  <%= image_tag(blog.user.avatar, class: "creator-img border-img") %>
+                                <%else%>
+                                  <%= image_tag("no-user-icon.jpg", class: "creator-img border-img") %>
+                                <%end%>
                                 <h5 class="name"><%= blog.user.username %></h5>                            
                               </div> 
                                 <h6><%= blog.created_at.strftime("%d %b, %Y")%></h6>
