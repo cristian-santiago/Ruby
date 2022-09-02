@@ -30,3 +30,16 @@
   max-width: 100% !important;
   
 }
+
+.attachment img{
+  max-width: 70%;
+  border-radius: 5%;  
+  margin: 0 auto;
+}
+
+.trix-content pre {
+  background: linear-gradient(to left,rgba(255,165,0, 0.3), rgba(255, 30, 0, 0.3));
+  border-radius: 10%;
+  width: 70%;
+  
+}
